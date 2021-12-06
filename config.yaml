@@ -20,7 +20,7 @@ manager:
   #      log_level: Keep this on ERROR to only record when there are errors. Change this to INFO in order to see more
   #                 detailed logging. Warning: INFO will write a lot of information.
   check_interval: 10
-  log_level: ERROR
+  log_level: INFO
 
 
 log:
@@ -39,7 +39,7 @@ view:
   #               include_cpu: This dictates whether the CPU information will be showed.
   #               include_ram: This dictates whether the RAM information will be showed.
   #        include_plot_stats: This dictates whether the plot stats will be showed.
-  check_interval: 2
+  check_interval: 1
   datetime_format: "%Y-%m-%d %H:%M:%S"
   include_seconds_for_phase: false
   include_drive_info: true
@@ -123,7 +123,7 @@ global:
   #                               on destination drive. Set to 0 to disable.
   max_concurrent: 10
   max_for_phase_1: 3
-  minimum_minutes_between_jobs: 1
+  minimum_minutes_between_jobs: 0
 
 
 jobs:
@@ -200,11 +200,11 @@ jobs:
   #                      logical cores 0-5, leaving logical cores 6 and 7 for other processes (6 restricted, 2 free).
   - name: chives
     chives_port: 9699
-    max_plots: 999
+    max_plots: 1000
     farmer_public_key: a929c001d9b09868913a87f6da1ead736e7c205c69654feec285c2b4e48342bd0071959b85f4361af8a3bf99d877c2bd
     pool_public_key: a4ec134af308322f337cc8ce540fb3a66fbddb9dcc84d1bfb2f550c24c802c5fca0bb6fbae96139961cad9c2c7ebd503
-    temporary_directory: /home/tmp/
-    temporary2_directory: /mnt/ram/
+    temporary_directory: /mnt/ram/
+    temporary2_directory: 
     destination_directory:
     - /root/gdrive/
     - /root/gdrive2/
@@ -213,19 +213,19 @@ jobs:
     bitfield: true
     threads: 8
     threadX_p2:
-    buckets: 512
+    buckets: 256
     buckets_p3: 128
-    memory_buffer: 4000
+    memory_buffer: 7000
     max_concurrent: 6
     max_concurrent_with_start_early: 7
     initial_delay_minutes: 0
-    stagger_minutes: 60
-    max_for_phase_1: 2
+    stagger_minutes: 0
+    max_for_phase_1: 1
     concurrency_start_early_phase: 4
-    concurrency_start_early_phase_delay: 0
+    concurrency_start_early_phase_delay: 2
     temporary2_destination_sync: false
     exclude_final_directory: false
-    skip_full_destinations: false
+    skip_full_destinations: true
     unix_process_priority: 10
     windows_process_priority: 32
     enable_cpu_affinity: false
