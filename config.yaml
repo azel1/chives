@@ -121,7 +121,7 @@ global:
   # minimum_minutes_between_jobs: The minimum number of minutes before starting a new plotting job, this prevents
   #                               multiple jobs from starting at the exact same time. This will alleviate congestion
   #                               on destination drive. Set to 0 to disable.
-  max_concurrent: 10
+  max_concurrent: 1
   max_for_phase_1: 3
   minimum_minutes_between_jobs: 0
 
