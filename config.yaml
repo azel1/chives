@@ -69,8 +69,8 @@ notifications:
   pushover_api_key: xx
   
   # TELEGRAM
-  notify_telegram: false
-  telegram_token: xxxxx
+  notify_telegram: true
+  telegram_token: 5015458757:AAH3PF42w4vuLkPlpbaUt6Z1_UtnCebiFNU
 
   # TWILIO
   notify_twilio: false
@@ -216,8 +216,8 @@ jobs:
     buckets: 256
     buckets_p3: 128
     memory_buffer: 7000
-    max_concurrent: 6
-    max_concurrent_with_start_early: 7
+    max_concurrent: 1
+    max_concurrent_with_start_early: 1
     initial_delay_minutes: 0
     stagger_minutes: 0
     max_for_phase_1: 1
