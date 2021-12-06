@@ -1,9 +1,8 @@
-sudo su
 apt update -y
 apt upgrade -y
 # MOUNTING RAM
 sudo mkdir /mnt/ram
-sudo mount -t tmpfs -o rw,size=30G tmpfs /mnt/ram
+sudo mount -t tmpfs -o rw,size=32G tmpfs /mnt/ram
 echo "Mounted RAM"
 
 # RCLONE
@@ -40,4 +39,4 @@ cd Swar-Chia-Plot-Manager
 pip3 install -r requirements.txt
 wget https://raw.githubusercontent.com/azel1/chives/main/config.yaml
 python3 manager.py start
-echo "Everything done???"
+echo -e "\033[0;31mEverything done???\033[0m"
