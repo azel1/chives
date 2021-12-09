@@ -198,7 +198,7 @@ jobs:
   #        cpu_affinity: List of cpu (or threads) to allocate for plot processes. The default example assumes you have
   #                      a hyper-threaded 4 core CPU (8 logical cores). This config will restrict plot processes to use
   #                      logical cores 0-5, leaving logical cores 6 and 7 for other processes (6 restricted, 2 free).
-  - name: chives
+  - name: chives2
     chives_port: 9699
     max_plots: 1000
     farmer_public_key: a929c001d9b09868913a87f6da1ead736e7c205c69654feec285c2b4e48342bd0071959b85f4361af8a3bf99d877c2bd
@@ -209,6 +209,8 @@ jobs:
     - /root/gdrive/
     - /root/gdrive2/
     - /root/gdrive3/
+    - /root/gdrive4/
+    - /root/gdrive5/
     size: 29
     bitfield: true
     threads: 8
@@ -216,8 +218,8 @@ jobs:
     buckets: 256
     buckets_p3: 128
     memory_buffer: 7000
-    max_concurrent: 1
-    max_concurrent_with_start_early: 1
+    max_concurrent: 6
+    max_concurrent_with_start_early: 7
     initial_delay_minutes: 0
     stagger_minutes: 0
     max_for_phase_1: 1
