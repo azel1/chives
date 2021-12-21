@@ -14,6 +14,10 @@ echo "Downloaded RClone Config"
 mkdir ~/gdrive
 mkdir ~/gdrive2
 mkdir ~/gdrive3
+mkdir ~/gdrive4
+mkdir ~/gdrive5
+mkdir ~/gdrive6
+mkdir ~/gdrive7
 apt install screen
 screen -S gdrive -dm bash -c "echo 'Mounting gdrive';rclone mount gdrive:chiamain ~/gdrive"
 screen -S gdrive2 -dm bash -c "echo 'Mounting gdrive2';rclone mount gdrive:chiamain ~/gdrive2"
