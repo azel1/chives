@@ -18,6 +18,10 @@ apt install screen
 screen -S gdrive -dm bash -c "echo 'Mounting gdrive';rclone mount gdrive:chiamain ~/gdrive"
 screen -S gdrive2 -dm bash -c "echo 'Mounting gdrive2';rclone mount gdrive:chiamain ~/gdrive2"
 screen -S gdrive3 -dm bash -c "echo 'Mounting gdrive3';rclone mount gdrive:chiamain ~/gdrive3"
+screen -S gdrive3 -dm bash -c "echo 'Mounting gdrive3';rclone mount gdrive:chiamain ~/gdrive4"
+screen -S gdrive3 -dm bash -c "echo 'Mounting gdrive3';rclone mount gdrive:chiamain ~/gdrive5"
+screen -S gdrive3 -dm bash -c "echo 'Mounting gdrive3';rclone mount gdrive:chiamain ~/gdrive6"
+screen -S gdrive3 -dm bash -c "echo 'Mounting gdrive3';rclone mount gdrive:chiamain ~/gdrive7"
 echo "Finished RClone Section"
 
 # MADMAX
