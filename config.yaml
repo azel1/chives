@@ -211,6 +211,8 @@ jobs:
     - /root/gdrive3/
     - /root/gdrive4/
     - /root/gdrive5/
+    - /root/gdrive6/
+    - /root/gdrive7/
     size: 29
     bitfield: true
     threads: 8
